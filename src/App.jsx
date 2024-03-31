@@ -1,13 +1,12 @@
-import { useState } from 'react'
-import './App.css'
+import SignUpForm from "./components/SignUpForm/SignUpForm.jsx";
+import SuccessDisplay from './components/SuccessDisplay/SuccessDisplay.jsx';
+import './App.css';
 
 function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <>
-    </>
-  )
+  return <main>
+    <SignUpForm />
+    {/* <SuccessDisplay /> */}
+  </main>
 }
 
 export default App

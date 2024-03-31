@@ -3,7 +3,10 @@ import styles from "./SuccessDisplay.module.css";
 export default function SuccessDisplay() {
   return (
     <section>
-      <img></img>
+      {/* <div className={styles.svgContainer}>
+        <img className={styles.headerImage}></img>
+      </div> */}
+      
       <h1>Thanks for subscribing!</h1>
       <p>
         A confirmation email has been sent to 

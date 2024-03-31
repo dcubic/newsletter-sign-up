@@ -1,9 +1,9 @@
 import SignUpForm from "./components/SignUpForm/SignUpForm.jsx";
 import SuccessDisplay from './components/SuccessDisplay/SuccessDisplay.jsx';
-import './App.css';
+import styles from "./App.module.css";
 
 function App() {
-  return <main>
+  return <main className={styles.contentContainer}>
     <SignUpForm />
     {/* <SuccessDisplay /> */}
   </main>

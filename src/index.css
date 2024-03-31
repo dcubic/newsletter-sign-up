@@ -3,6 +3,7 @@
     --dark-slate-grey: hsl(234, 29%, 20%);
     --charcoal: hsl(235, 18%, 26%);
     --grey: hsl(231, 7%, 60%);
+    --grey-translucent: hsla(231, 7%, 60%, 0.4);
 }
 
 @font-face {

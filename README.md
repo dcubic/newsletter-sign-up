@@ -1,1 +1,1 @@
-See it in action here: https://github.com/dcubic/newsletter-sign-up/
+See it in action here: https://dcubic.github.io/newsletter-sign-up/

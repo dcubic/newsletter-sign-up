@@ -1,12 +1,13 @@
 import styles from "./SignUpForm.module.css";
+import formStyles from "../../sharedCSSModules/formStyles.module.css";
 import MobileSignUpImage from "../../assets/images/illustration-sign-up-mobile.svg";
 import DesktopSignUpImage from "../../assets/images/illustration-sign-up-desktop.svg";
 import { listText } from "./Data.js";
 
 export default function SignUpForm() {
   return (
-    <>
-      <section>
+    <div class={styles.container}>
+      <section class={styles.imageContainer}>
           <img src={MobileSignUpImage} className={styles.mobileHeaderImage}></img>
           <img src={DesktopSignUpImage} className={styles.desktopHeaderImage}></img>
       </section>
@@ -17,13 +18,13 @@ export default function SignUpForm() {
           {listText.map(text => <li className={styles.listElement}>{text}</li>)}
         </ul>
         <form>
-          <fieldset className={styles.fieldset}>
-            <legend className={styles.legend}>Email address</legend>
-            <input placeholder="email@company.com" type="email" className={styles.input}></input>
-            <button className={styles.button}>Subscribe to monthly newsletter</button>
+          <fieldset className={formStyles.fieldset}>
+            <legend className={formStyles.legend}>Email address</legend>
+            <input placeholder="email@company.com" type="email" className={formStyles.input}></input>
+            <button className={formStyles.button}>Subscribe to monthly newsletter</button>
           </fieldset>
         </form>
       </section>
-    </>
+    </div>
   );
 }

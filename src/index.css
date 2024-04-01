@@ -4,6 +4,8 @@
     --charcoal: hsl(235, 18%, 26%);
     --grey: hsl(231, 7%, 60%);
     --grey-translucent: hsla(231, 7%, 60%, 0.4);
+
+    --desktop-width-threshold: 650px;
 }
 
 @font-face {
@@ -19,4 +21,14 @@ html {
 
 h1, p, body, ul {
     margin: 0;
+}
+
+@media only screen and (min-width: 650px) {
+    body {
+        background-color: var(--charcoal);
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }

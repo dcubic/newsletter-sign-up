@@ -7,15 +7,21 @@ import { listText } from "./Data.js";
 
 export default function SignUpForm({ setHasSubmitted }) {
   const [email, setEmail] = useState("");
+  const [isErrorState, setIsErrorState] = useState(false);
+
   function handleEmailChange(event) {
+    setIsErrorState(false);
     setEmail(event.target.value);
   }
 
   const validEmailRegex = /\w+@\w+.com/;
-  function handleClick() {
-    console.log("Clicked button.");
+  function handleClick(event) {
+    event.preventDefault();
     if (validEmailRegex.test(email)) {
-      setHasSubmitted(hasSubmitted => !hasSubmitted);
+      setHasSubmitted(hasSubmitted => !hasSubmitted)
+      setIsErrorState(false);
+    } else {
+      setIsErrorState(true);
     }
   }
 
@@ -40,10 +46,13 @@ export default function SignUpForm({ setHasSubmitted }) {
         </ul>
         <form>
           <fieldset className={formStyles.fieldset}>
-            <legend className={formStyles.legend}>Email address</legend>
+            <div className={formStyles.legend}>
+              <p>Email address</p>
+              {isErrorState && <p className={formStyles.errorText}>Valid email required</p>}
+            </div>
             <input
               placeholder="email@company.com"
-              className={formStyles.input}
+              className={isErrorState ? [formStyles.input, formStyles.errorInput].join(" ") : formStyles.input}
               onChange={handleEmailChange}
             ></input>
             <button className={formStyles.button} onClick={handleClick}>

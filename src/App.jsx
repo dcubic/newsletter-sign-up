@@ -8,8 +8,6 @@ function App() {
 
   return <main className={styles.contentContainer}>
     {hasSubmitted ? <SuccessDisplay setHasSubmitted={setHasSubmitted}/> : <SignUpForm setHasSubmitted={setHasSubmitted}/>}
-    {/* <SignUpForm />
-    <SuccessDisplay /> */}
   </main>
 }
 

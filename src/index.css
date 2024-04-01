@@ -1,10 +1,11 @@
 :root {
     --tomato: hsl(4, 100%, 67%);
+    --translucent-tomato: hsla(4, 100%, 67%, 0.25);
     --dark-slate-grey: hsl(234, 29%, 20%);
     --charcoal: hsl(235, 18%, 26%);
     --grey: hsl(231, 7%, 60%);
     --grey-translucent: hsla(231, 7%, 60%, 0.4);
-
+    --rose: #FF5379;
     --desktop-width-threshold: 650px;
 }
 
